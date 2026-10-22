@@ -29,7 +29,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "app/lib/placeholder-data.ts",
-    "app/scripts/seed.js",
+    "app/seed/seed.js",
     ".next/dev/types/**/*.ts"
   ],
   "exclude": ["node_modules"]
