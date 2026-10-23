@@ -1,6 +1,4 @@
 import postgres from 'postgres';
-// import { neon} from '@neondatabase/serverless';
-// import { HttpsProxyAgent } from 'https-proxy-agent';
 import {
   CustomerField,
   CustomersTableType,
@@ -12,7 +10,6 @@ import {
 import { formatCurrency } from './utils';
 
 const sql = postgres(process.env.POSTGRES_URL!, { ssl: 'require' });
-// const sql = neon(process.env.POSTGRES_URL!);
 
 export async function fetchRevenue() {
   try {
@@ -23,7 +20,6 @@ export async function fetchRevenue() {
     // await new Promise((resolve) => setTimeout(resolve, 3000));
 
     const data = await sql<Revenue[]>`SELECT * FROM revenue`;
-    // const data = (await sql.query('SELECT * FROM revenue')) as Revenue[];
 
     // console.log('Data fetch completed after 3 seconds.');
 
